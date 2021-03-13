@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/13af073304.js" crossorigin="anonymous"></script>
+  <title> Bootcamp capsules</title>
+</head>
+<style>
+  .filtered{
+    display: none;
+  }
+</style>
+<body>
+  <header>
+    <h1>Bootcamp Capsules</h1>
+    <form class="search">
+      <input class="form-control m-auto" type="text" name="search" placeholder="search todos" />
+      <select id="dropdown" name="studLabels">
+        <option value=".First_Name">First Name</option>
+        <option value=".Last_Name">Last Name</option>
+        <option value=".capsule">capsule</option>
+        <option value=".Age">Age</option>
+        <option value=".City">City</option>
+        <option value=".Gender">Gender</option>
+        <option value=".Hobby">Hobby</option>
+      </select>
+    </form>
+  </header>
+  <div id="container"></div>
+  <script src="app.js"></script>
+  <script>createTable()</script>
+</body>
+
+</html>
+
+
