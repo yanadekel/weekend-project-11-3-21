@@ -61,8 +61,7 @@ async function createTable() {
   table.innerHTML = tbl_string;
   container.appendChild(table);
   localStorage.setItem('table',tbl_string);
-  // Get Data
-  // Update Data
+
 }
 
 
@@ -132,7 +131,7 @@ function toEditMode(e) {
 formSearch.addEventListener('keyup', () => {
 
   const term = formSearch.value.trim().toLowerCase();
-  this.filterTodos(term,valuefromDropDown);
+  this.filterHeader(term,valuefromDropDown);
 });
 
 let valuefromDropDown
@@ -140,7 +139,7 @@ dropdown.addEventListener('change',(e)=>{
   valuefromDropDown=e.target.value;
 })
 
-function filterTodos(term,searchHeader= '.First_Name') {
+function filterHeader(term,searchHeader= '.First_Name') {
   const headerData = document.querySelectorAll(searchHeader);
   Array.from(headerData)
     .filter((printContent)=>!printContent.textContent.toLowerCase().includes(term))
